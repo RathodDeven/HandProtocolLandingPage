@@ -89,6 +89,28 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #757372;
   }
+
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .video-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .video-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(to right, transparent, black, transparent);
+  }
 }
 
 :root {
@@ -103,7 +125,7 @@
 
 [data-theme='dark'] {
   /* background */
-  --primary-background: #1f1c1b;
+  --primary-background: #000000;
   --secondary-background: #272325;
 
   /* text */
