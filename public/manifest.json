@@ -4,8 +4,8 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "PROJECT_NAME",
-  "short_name": "PROJECT_NAME",
+  "name": "Hnad Protocol",
+  "short_name": "$hand",
   "icons": [
     {
       "src": "/vercel.svg",

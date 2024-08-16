@@ -22,10 +22,10 @@ const UILayout: React.FC<Props> = (props) => {
   return (
     <div className={clsx(inter.className, 'bg-p-bg text-p-text')}>
       <div className="relative z-10 h-screen w-screen">
-        <div className="w-full absolute left-0 right-0 top-0 ">
+        {/* <div className="w-full absolute left-0 right-0 top-0 ">
           <TopHeader />
-        </div>
-        <div className="start-center-row h-screen pt-[60px] overflow-hidden">
+        </div> */}
+        <div className="start-center-row h-screen overflow-hidden">
           <div className="h-full w-full">{props.children}</div>
         </div>
       </div>
