@@ -57,12 +57,9 @@ export default function Home() {
           className="relative w-fit h-fit px-12 sm:px-0 "
         >
           {/* <img src="/handThumbnail.png" width={350} height={350} /> */}
-          <video
+          <img
             className="unselectable w-[250px] sm:w-[350px]"
-            src="handAnimation.mp4"
-            autoPlay
-            muted
-            loop
+            src="handAnimation.gif"
           />
           <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-black/90 via-transparent to-black/90"></div>
         </motion.div>
