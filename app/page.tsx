@@ -2,8 +2,9 @@
 import './globals.css'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { DISCORD_INVITE_LINK } from '../utils/config'
+import { DISCORD_INVITE_LINK, GITHUB_LINK } from '../utils/config'
 import Confetti from 'react-confetti'
+import { sleep } from '../utils/helpers'
 
 export default function Home() {
   const [isConfettiActive, setIsConfettiActive] = useState(false)
@@ -36,7 +37,6 @@ export default function Home() {
       'handAnimationVideo'
     ) as HTMLVideoElement
 
-    console.log('videoElement', videoElement)
     if (videoElement) {
       videoElement.play()
     }
@@ -50,23 +50,32 @@ export default function Home() {
         initial="hidden"
         animate="show"
         transition={{ duration: 0.3, type: 'spring' }}
-        className=" h-full centered-col text-center w-[600px] gap-y-10 -mt-36"
+        className=" h-full centered-col text-center w-full px-4 sm:px-0 sm:w-[600px] gap-y-4 sm:gap-y-10 -mt-20 sm:-mt-36"
       >
-        <motion.div variants={childVariants} className="relative w-fit h-fit">
+        <motion.div
+          variants={childVariants}
+          className="relative w-fit h-fit px-12 sm:px-0 "
+        >
           {/* <img src="/handThumbnail.png" width={350} height={350} /> */}
-          <video src="handAnimation.mp4" width={350} autoPlay muted loop />
+          <video
+            className="unselectable w-[250px] sm:w-[350px]"
+            src="handAnimation.mp4"
+            autoPlay
+            muted
+            loop
+          />
           <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-black/90 via-transparent to-black/90"></div>
         </motion.div>
         <motion.div
-          variants={staggerContainer}
-          className="text-4xl font-bold"
+          variants={childVariants}
+          className="text-2xl px-4 sm:px-0 sm:text-4xl font-bold"
           transition={{ duration: 0.3, type: 'spring' }}
         >
           Empowering Public Good Projects in a fun way
         </motion.div>
         <motion.div
-          variants={staggerContainer}
-          className="text-s-text font-semibold text-xl"
+          variants={childVariants}
+          className="text-s-text px-2 sm:px-0 font-semibold text-md sm:text-xl"
           transition={{ duration: 0.3, type: 'spring' }}
         >
           The $HAND Protocol is here to reshape how we support public goods. By
@@ -75,20 +84,46 @@ export default function Home() {
           difference together.
         </motion.div>
 
-        <motion.button
-          variants={staggerContainer}
-          whileTap={{
-            scale: 1,
-            opacity: 0.8
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, scale: 0 },
+            show: { opacity: 1, scale: 1 }
           }}
-          onClick={handleButtonClick}
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.2, type: 'spring' }}
-          className="bg-p-text cursor-grab active:cursor-grabbing centered-row border-none gap-x-4 font-bold text-lg text-p-bg px-10 py-4 rounded-2xl"
+          transition={{ duration: 0.3, type: 'spring', staggerChildren: 0.3 }}
+          className="centered-col sm:centered-row gap-y-4 sm:gap-x-6"
         >
-          <img src="/discord-icon.svg" width={24} height={24} />
-          Join the Movement
-        </motion.button>
+          <motion.button
+            variants={childVariants}
+            whileTap={{
+              scale: 0.9,
+              opacity: 0.8
+            }}
+            onClick={handleButtonClick}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.2, type: 'spring' }}
+            className="bg-p-text shrink-0 cursor-grab active:cursor-grabbing centered-row border-none gap-x-4 font-bold text-lg text-p-bg px-10 py-4 rounded-2xl"
+          >
+            <img src="/discord-icon.svg" width={24} height={24} />
+            Join the Movement
+          </motion.button>
+          <motion.button
+            variants={childVariants}
+            whileTap={{
+              scale: 0.9,
+              opacity: 0.8
+            }}
+            onClick={async () => {
+              await sleep(2000)
+              window.open(GITHUB_LINK, '_blank')
+            }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.2, type: 'spring' }}
+            className="bg-s-bg cursor-grab shrink-0 active:cursor-grabbing centered-row border-none gap-x-4 font-bold text-lg text-p-text px-10 py-4 rounded-2xl"
+          >
+            <img src="/github-icon.svg" width={24} height={24} />
+            Github
+          </motion.button>
+        </motion.div>
       </motion.div>
     </div>
   )
