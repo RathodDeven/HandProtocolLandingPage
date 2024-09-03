@@ -12,7 +12,7 @@ declare global {
 export const metadata: Metadata = {
   manifest: '/manifest.json', // we are accessing our manifest file here
   title: 'Hand Protocol',
-  description: 'Supporting Public Good Projects in a fun way'
+  description: 'Supporting Public Good Projects'
 }
 
 export default function RootLayout({

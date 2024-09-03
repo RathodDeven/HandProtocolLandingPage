@@ -68,7 +68,7 @@ export default function Home() {
           className="text-2xl px-4 sm:px-0 sm:text-4xl font-bold"
           transition={{ duration: 0.3, type: 'spring' }}
         >
-          Empowering Public Good Projects in a fun way
+          Empowering Public Good Projects
         </motion.div>
         <motion.div
           variants={childVariants}
@@ -110,7 +110,7 @@ export default function Home() {
               opacity: 0.8
             }}
             onClick={async () => {
-              await sleep(2000)
+              await sleep(300)
               window.open(GITHUB_LINK, '_blank')
             }}
             whileHover={{ scale: 1.05 }}
