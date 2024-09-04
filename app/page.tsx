@@ -75,10 +75,11 @@ export default function Home() {
           className="text-s-text px-2 sm:px-0 font-semibold text-md sm:text-xl"
           transition={{ duration: 0.3, type: 'spring' }}
         >
-          The $HAND Protocol is here to reshape how we support public goods. By
-          using blockchain, media, and community power, we're building better
-          ways to fund and grow impact projects. Join us in making a real
-          difference together.
+          Our platform connects impactful projects with generous donors,
+          streamlining the giving process to maximize contributions. We actively
+          seek out, onboard and support diverse initiatives, handling all
+          logistics to ensure your donation makes the greatest possible
+          difference.
         </motion.div>
 
         <motion.div
