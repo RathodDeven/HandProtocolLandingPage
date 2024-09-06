@@ -19,15 +19,22 @@ const inter = Inter({ subsets: ['latin'] })
 
 const UILayout: React.FC<Props> = (props) => {
   // Define the component's logic and rendering here
+
   return (
-    <div className={clsx(inter.className, 'bg-p-bg text-p-text')}>
-      <div className="relative z-10 h-screen w-screen">
-        {/* <div className="w-full absolute left-0 right-0 top-0 ">
-          <TopHeader />
-        </div> */}
-        <div className="start-center-row h-screen overflow-hidden">
-          <div className="h-full w-full">{props.children}</div>
-        </div>
+    <div
+      className={clsx(inter.className, 'relative z-10 text-p-text bg-p-bg')}
+      onScroll={() => {
+        console.log('scrolling')
+      }}
+    >
+      <div
+        id="MasterParentPage"
+        className="flex h-full w-full pt-20 overflow-y-auto"
+      >
+        {props.children}
+      </div>
+      <div className="w-full fixed left-0 right-0 top-0">
+        <TopHeader />
       </div>
     </div>
   )

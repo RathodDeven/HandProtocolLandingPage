@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { createContext } from 'react'
+import { DEFAULT_THEME } from '../../utils/config'
 
 interface ContextType {
   theme: 'light' | 'dark'
@@ -10,12 +11,12 @@ interface ContextType {
 }
 
 export const ThemeContext = createContext<ContextType>({
-  theme: 'dark',
+  theme: DEFAULT_THEME,
   toggleTheme: () => {}
 })
 // import MUITheme from './MUITheme'
 const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark')
+  const [theme, setTheme] = useState<'light' | 'dark'>(DEFAULT_THEME)
 
   const toggleTheme = () => {
     if (theme === 'light') {
@@ -39,10 +40,10 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
       // @ts-ignore
       setTheme(theme)
     } else {
-      document.body.classList.add('dark')
-      document.documentElement.setAttribute('data-theme', 'dark')
-      window.localStorage.setItem('data-theme', 'dark')
-      setTheme('dark')
+      document.body.classList.add(DEFAULT_THEME)
+      document.documentElement.setAttribute('data-theme', DEFAULT_THEME)
+      window.localStorage.setItem('data-theme', DEFAULT_THEME)
+      setTheme(DEFAULT_THEME)
     }
   }, [])
   return (

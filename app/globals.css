@@ -115,20 +115,20 @@
 
 :root {
   /* background */
-  --primary-background: #cfb3a1;
-  --secondary-background: #f5c6a9;
+  --p-background: #ebebeb;
+  --s-background: #ffffff;
 
   /* text */
-  --primary-text: #363534;
-  --secondary-text: #757372;
+  --p-text: #000000;
+  --s-text: #807b7b;
 }
 
 [data-theme='dark'] {
   /* background */
-  --primary-background: #000000;
-  --secondary-background: #272325;
+  --p-background: #000000;
+  --s-background: #666161;
 
   /* text */
-  --primary-text: #ffffff;
-  --secondary-text: #7b7a7b;
+  --p-text: #ffffff;
+  --s-text: #7b7a7b;
 }

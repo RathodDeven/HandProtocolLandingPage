@@ -18,11 +18,17 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
       },
       colors: {
-        'p-bg': '#000000',
-        's-bg': '#272325',
-        's-text': '#7b7a7b',
-        'p-text': '#ffffff'
+        'p-bg': 'var(--p-background)',
+        's-bg': 'var(--s-background)',
+        's-text': 'var(--s-text)',
+        'p-text': 'var(--p-text)'
       }
+    }
+  },
+  variants: {
+    extend: {
+      backdropBlur: ['responsive'],
+      backdropFilter: ['responsive']
     }
   },
   plugins: []

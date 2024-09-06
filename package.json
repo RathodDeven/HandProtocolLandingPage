@@ -1,5 +1,5 @@
 {
-  "name": "your-app-name",
+  "name": "Hand Protocol",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -24,8 +24,6 @@
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
     "@fontsource/roboto": "^5.0.14",
-    "@mui/icons-material": "^5.16.7",
-    "@mui/material": "^5.16.7",
     "@rainbow-me/rainbowkit": "^2.1.4",
     "@tanstack/react-query": "^5.51.23",
     "@wagmi/core": "^2.13.4",
@@ -35,6 +33,7 @@
     "ethers": "^6.13.2",
     "framer-motion": "^11.3.28",
     "i": "^0.3.7",
+    "lucide-react": "^0.439.0",
     "next": "14.2.5",
     "npm": "^10.8.2",
     "postcss": "8.4.41",
