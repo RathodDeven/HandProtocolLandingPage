@@ -203,7 +203,10 @@ const TopHeader = () => {
   // const { theme, toggleTheme } = useTheme()
   return (
     <motion.div
-      className="flex h-14 sm:h-20 flex-row items-center justify-between px-3 sm:px-14 bg-transparent backdrop-blur-md backdrop-filter "
+      className="flex h-14 sm:h-20 flex-row items-center justify-between px-3 sm:px-14 bg-transparent backdrop-blur-md backdrop-filter"
+      style={{
+        zIndex: 1000
+      }}
       variants={headerVariants}
       initial="visible"
       animate={scrollDirection === 'down' ? 'hidden' : 'visible'}

@@ -76,17 +76,14 @@ const FeaturedProjects = () => {
       transition: {
         delay: 2
       },
-      y: 50,
-      zIndex: 0
+      y: 50
     },
     center: {
       opacity: 1,
-      zIndex: 1,
       y: 0
     },
     exit: {
-      opacity: 0.8,
-      zIndex: 0
+      opacity: 0.8
     }
   }
   return (
