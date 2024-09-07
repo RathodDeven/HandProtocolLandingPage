@@ -84,7 +84,7 @@ importers:
         specifier: ^2.21.3
         version: 2.21.3(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@5.0.10)
       wagmi:
-        specifier: 2.12.5
+        specifier: ^2.12.5
         version: 2.12.5(@tanstack/query-core@5.54.1)(@tanstack/react-query@5.55.0(react@18.3.1))(@types/react@18.3.5)(bufferutil@4.0.8)(react-dom@18.3.1(react@18.3.1))(react-native@0.75.0(@babel/core@7.25.2)(@babel/preset-env@7.25.3(@babel/core@7.25.2))(@types/react@18.3.5)(bufferutil@4.0.8)(react@18.3.1)(typescript@5.5.4)(utf-8-validate@5.0.10))(react@18.3.1)(rollup@2.79.1)(typescript@5.5.4)(utf-8-validate@5.0.10)(viem@2.21.3(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@5.0.10))
       zustand:
         specifier: ^4.5.5
