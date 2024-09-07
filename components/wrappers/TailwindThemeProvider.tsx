@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { useContext } from 'react'
 import { useEffect } from 'react'
@@ -19,6 +20,7 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [theme, setTheme] = useState<'light' | 'dark'>(DEFAULT_THEME)
 
   const toggleTheme = () => {
+    if (typeof window === 'undefined') return
     if (theme === 'light') {
       document.body.classList.add('dark')
       document.documentElement.setAttribute('data-theme', 'dark')
@@ -33,6 +35,7 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
     const theme = window.localStorage.getItem('data-theme')
     if (theme) {
       document.body.classList.add(theme)

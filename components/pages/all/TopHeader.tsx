@@ -12,6 +12,7 @@ import {
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { MoveUpRight, ChevronUp, ArrowUpRight } from 'lucide-react'
+import useIsMobile from '../../../utils/hooks/useIsMobile'
 
 interface MenuItemProps {
   name: string
@@ -73,6 +74,11 @@ const TopHeader = () => {
         {
           name: 'Animals/pets',
           link: '/animals',
+          target: '_self'
+        },
+        {
+          name: 'Human Rights',
+          link: '/human-rights',
           target: '_self'
         }
       ]
@@ -170,8 +176,8 @@ const TopHeader = () => {
   const [scrollDirection, setScrollDirection] = useState('up')
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
     const handleScroll = () => {
-      console.log('scrolling')
       const currentScrollY = window.scrollY
       if (currentScrollY > scrollY) {
         setScrollDirection('down')
@@ -192,26 +198,38 @@ const TopHeader = () => {
     visible: { y: 0, transition: { duration: 0.3 } }
   }
 
+  const isMobile = useIsMobile()
+
   // const { theme, toggleTheme } = useTheme()
   return (
     <motion.div
-      className="flex h-20 flex-row items-center justify-between px-6 bg-transparent backdrop-blur-sm backdrop-filter "
+      className="flex h-14 sm:h-20 flex-row items-center justify-between px-3 sm:px-14 bg-transparent backdrop-blur-md backdrop-filter "
       variants={headerVariants}
       initial="visible"
       animate={scrollDirection === 'down' ? 'hidden' : 'visible'}
     >
-      <div className="start-center-row gap-x-4 text-p-text no-underline">
+      <div className="start-center-row gap-x-2 sm:gap-x-4 text-p-text no-underline">
         <Link href={'/'} target="_self">
-          <img src="/logo.png" className="w-12 h-12 rounded-full" />
+          <img
+            src="/logo.png"
+            className="w-8 h-8 sm:w-12 sm:h-12 rounded-full"
+          />
         </Link>
-        <div className="text-xl font-bold">{APP_NAME}</div>
-        <nav className="ml-8 start-center-row gap-x-8">
-          {menuItems.map((item, index) => (
-            <MenuItem key={index} item={item} />
-          ))}
-        </nav>
+        <div className="text-md sm:text-xl font-bold">{APP_NAME}</div>
+
+        {!isMobile && (
+          <nav className="ml-8 start-center-row gap-x-8">
+            {menuItems.map((item, index) => (
+              <MenuItem key={index} item={item} />
+            ))}
+          </nav>
+        )}
       </div>
-      <ConnectButton />
+      <ConnectButton
+        accountStatus={isMobile ? 'avatar' : 'full'}
+        chainStatus={isMobile ? 'icon' : 'full'}
+        showBalance={!isMobile}
+      />
       {/* <button onClick={toggleTheme}>
         {theme === 'light' ? 'Dark' : 'Light'}
       </button> */}

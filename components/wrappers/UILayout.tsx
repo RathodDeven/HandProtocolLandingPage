@@ -29,7 +29,7 @@ const UILayout: React.FC<Props> = (props) => {
     >
       <div
         id="MasterParentPage"
-        className="flex h-full w-full pt-20 overflow-y-auto"
+        className="flex h-full w-full pt-14 sm:pt-20 overflow-y-auto overflow-x-hidden"
       >
         {props.children}
       </div>
