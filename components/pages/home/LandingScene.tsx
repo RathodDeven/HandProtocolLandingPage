@@ -29,6 +29,7 @@ const LandingScene = () => {
     setIsConfettiActive(true)
     setTimeout(() => {
       setIsConfettiActive(false)
+      if (typeof window === 'undefined') return
       window.open(DISCORD_INVITE_LINK, '_blank')
     }, 2000) // Duration of the confetti animation
   }

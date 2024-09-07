@@ -176,6 +176,7 @@ const TopHeader = () => {
   const [scrollDirection, setScrollDirection] = useState('up')
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
     const handleScroll = () => {
       const currentScrollY = window.scrollY
       if (currentScrollY > scrollY) {
