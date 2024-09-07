@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 @layer components {
-  .centered-row {
+  .center-row {
     @apply flex flex-row items-center justify-center;
   }
 
-  .centered-col {
+  .center-col {
     @apply flex flex-col items-center justify-center;
   }
 
@@ -35,7 +35,7 @@
     @apply flex flex-col items-end;
   }
 
-  .centered {
+  .center {
     @apply flex flex-col items-center justify-center w-full h-full;
   }
 
