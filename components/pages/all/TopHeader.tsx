@@ -20,18 +20,18 @@ import MenuItem, { MenuItemProps } from './MenuItem'
 export const menuItems: MenuItemProps[] = [
   {
     name: 'Team',
-    link: '/team',
+    link: '/',
     target: '_self'
   },
   {
     name: 'Impact',
-    link: '/impact',
+    link: '/',
     target: '_self'
   },
   {
     name: 'Docs',
-    link: DOCS_LINK,
-    target: '_blank'
+    link: '/',
+    target: '_self'
   },
   {
     name: 'Community',
