@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useInView } from 'framer-motion'
 import { INIT_PROJECTS } from '../../../utils/config'
 import useIsMobile from '../../../utils/hooks/useIsMobile'
+import clsx from 'clsx'
 
 const FeaturedProjects = () => {
   const ref = useRef(null)
@@ -92,7 +93,7 @@ const FeaturedProjects = () => {
         Featured Projects
       </div>
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full start-col"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full start-col"
         variants={containerVariants}
         initial="hidden"
         animate={isInView ? 'visible' : 'hidden'}
@@ -100,8 +101,14 @@ const FeaturedProjects = () => {
         {INIT_PROJECTS.map((project) => (
           <motion.a
             key={project.id}
-            className="bg-white text-p-text no-underline rounded-lg shadow-lg overflow-hidden cursor-pointer"
+            className={clsx(
+              'bg-white text-p-text no-underline rounded-lg sm:rounded-2xl overflow-hidden cursor-pointer',
+              hoveredProjectId === project.id || isMobile
+                ? ' shadow-md'
+                : 'shadow-sm'
+            )}
             whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.015 }}
             variants={itemVariants}
             onMouseEnter={() => setHoveredProjectId(project.id)}
             onMouseLeave={() => setHoveredProjectId(null)}
@@ -144,9 +151,27 @@ const FeaturedProjects = () => {
             <div className="mt-4 px-4 text-xl sm:text-2xl font-semibold">
               {project.name}
             </div>
-            <div className="px-4 text-s-text font-semibold text-md sm:text-lg">
+
+            <motion.div
+              initial={{
+                opacity: 0,
+                x: -20
+              }}
+              animate={
+                hoveredProjectId === project.id || isMobile
+                  ? {
+                      opacity: 1,
+                      x: 0
+                    }
+                  : {
+                      opacity: 0,
+                      x: -15
+                    }
+              }
+              className="px-4 text-s-text font-semibold text-sm sm:text-base"
+            >
               {project.by && `by ${project.by}`}
-            </div>
+            </motion.div>
             <div className="p-4 italic text-sm sm:text-base text-s-text">
               {project.shortDescription}
             </div>

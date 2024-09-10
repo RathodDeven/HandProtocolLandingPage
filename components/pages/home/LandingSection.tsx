@@ -4,16 +4,14 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Confetti from 'react-confetti'
 import { HandCoins } from 'lucide-react'
-import useIsMobile from '../../../utils/hooks/useIsMobile'
 import { DISCORD_INVITE_LINK } from '../../../utils/config'
 
-const LandingScene = () => {
+const LandingSection = () => {
   const [isConfettiActive, setIsConfettiActive] = useState(false)
   const staggerContainer = {
-    hidden: { opacity: 0, scale: 0 },
+    hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      scale: 1,
       transition: {
         staggerChildren: 0.3
       }
@@ -21,8 +19,8 @@ const LandingScene = () => {
   }
 
   const childVariants = {
-    hidden: { opacity: 0, scale: 0 },
-    show: { opacity: 1, scale: 1 }
+    hidden: { opacity: 0, x: -20, scale: 1.5 },
+    show: { opacity: 1, x: 0, scale: 1 }
   }
 
   const handleButtonClick = () => {
@@ -44,19 +42,18 @@ const LandingScene = () => {
     }
   }, [])
 
-  const isMobile = useIsMobile()
   return (
     <div>
       {isConfettiActive && <Confetti wind={0.03} numberOfPieces={300} />}
 
       {/* landing component with title and description */}
-      <div className="w-screen box-border h-screen -mt-14 sm:-mt-20 flex flex-col items-center justify-center sm:flex-row sm:justify-between sm:px-16 relative">
+      <div className="w-screen h-[calc(180vh)] sm:h-screen  box-border  -mt-14 sm:-mt-20 flex flex-col items-center justify-center sm:flex-row sm:justify-between sm:px-16 relative">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           animate="show"
           transition={{ duration: 0.3, type: 'spring' }}
-          className=" h-full flex flex-col justify-center items-center text-center sm:text-left sm:items-start w-full px-4 sm:px-0 sm:w-[600px] gap-y-10"
+          className=" h-[120vh] flex flex-col justify-center items-center text-center sm:text-left sm:items-start w-full px-4 sm:px-0 sm:w-[600px] gap-y-10"
         >
           <motion.div
             variants={childVariants}
@@ -101,24 +98,26 @@ const LandingScene = () => {
             </motion.button>
           </motion.div>
         </motion.div>
-        {!isMobile && (
-          <motion.div
-            variants={childVariants}
-            className="relative w-fit h-fit px-12 sm:px-0"
-            initial="hidden"
-            animate="show"
-          >
-            {/* <img src="/handThumbnail.png" width={350} height={350} /> */}
-            <img
-              className="unselectable w-[250px] sm:w-[350px] "
-              src="handAnimation.gif"
-            />
-            <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-black/90 via-transparent to-black/90"></div>
-          </motion.div>
-        )}
+
+        <motion.div
+          variants={childVariants}
+          className="relative w-full sm:w-2/3 h-1/2 sm:h-full sm:-mr-20 "
+          initial="hidden"
+          animate="show"
+        >
+          <div className="absolute bg-p-bg w-full h-14 sm:h-24 bottom-0 left-0 right-0 z-10" />
+          <iframe
+            src="https://my.spline.design/molang3dcopy-0ae5e2f6de7287cd246103c17bcb4bcb/"
+            style={{
+              border: 'none'
+            }}
+            width="100%"
+            height="100%"
+          />
+        </motion.div>
       </div>
     </div>
   )
 }
 
-export default LandingScene
+export default LandingSection
