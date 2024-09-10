@@ -6,7 +6,7 @@ export const DEFAULT_THEME: 'light' | 'dark' = 'light'
 
 // links
 
-export const DISCORD_INVITE_LINK = 'https://discord.gg/aZb5hEKG5e'
+export const DISCORD_INVITE_LINK = 'https://discord.handprotocol.org'
 export const GITHUB_LINK = 'https://github.com/HandProtocol'
 export const LENS_LINK = 'https://share.lens.xyz/u/lens/handprotocol'
 export const FARCASTER_LINK = 'https://warpcast.com/handprotocol'

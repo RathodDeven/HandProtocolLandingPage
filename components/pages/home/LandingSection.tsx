@@ -5,8 +5,10 @@ import { motion } from 'framer-motion'
 import Confetti from 'react-confetti'
 import { HandCoins } from 'lucide-react'
 import { DISCORD_INVITE_LINK } from '../../../utils/config'
+import useIsMobile from '../../../utils/hooks/useIsMobile'
 
-const LandingSection = () => {
+const LandingSection = ({ scrollToProjects }) => {
+  const isMobile = useIsMobile()
   const [isConfettiActive, setIsConfettiActive] = useState(false)
   const staggerContainer = {
     hidden: { opacity: 0 },
@@ -28,7 +30,21 @@ const LandingSection = () => {
     setTimeout(() => {
       setIsConfettiActive(false)
       if (typeof window === 'undefined') return
-      window.open(DISCORD_INVITE_LINK, '_blank')
+      if (isMobile) {
+        // just redirect to discord invite link
+        window.open(DISCORD_INVITE_LINK, '_blank')
+      }
+      const width = 500
+      const height = 300
+      const left = window.screen.width / 2 - width / 2
+      const top = window.screen.height / 2 - height / 2
+
+      window.open(
+        DISCORD_INVITE_LINK,
+        'popup',
+        `width=${width},height=${height},left=${left},top=${top}`
+      )
+      scrollToProjects()
     }, 2000) // Duration of the confetti animation
   }
 
