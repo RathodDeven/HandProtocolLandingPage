@@ -88,9 +88,12 @@ const FeaturedProjects = () => {
     }
   }
   return (
-    <div ref={ref} className="w-full box-border p-4 sm:p-14 start-col">
-      <div className="text-3xl font-bold text-s-text mb-8 ">
+    <div ref={ref} className="w-full box-border p-4 sm:p-14 start-center-col">
+      <div className="text-4xl sm:text-3xl font-bold text-p-text mb-2">
         Featured Projects
+      </div>
+      <div className="text-s-text text-base sm:text-lg mb-4 sm:mb-8">
+        Empowering Changemakers Worldwide
       </div>
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full start-col"

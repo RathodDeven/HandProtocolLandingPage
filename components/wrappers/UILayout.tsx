@@ -35,12 +35,7 @@ const UILayout: React.FC<Props> = (props) => {
     )
   }
   return (
-    <div
-      className={clsx(inter.className, 'relative z-10 text-p-text bg-p-bg')}
-      onScroll={() => {
-        console.log('scrolling')
-      }}
-    >
+    <div className={clsx(inter.className, 'relative z-10 text-p-text bg-p-bg')}>
       <div
         id="MasterParentPage"
         className="flex h-full w-full pt-14 sm:pt-20 overflow-y-auto overflow-x-hidden"

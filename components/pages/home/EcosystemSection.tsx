@@ -35,44 +35,73 @@ const EcosystemSection = () => {
   }
 
   return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate={isInView ? 'visible' : 'hidden'}
+    <div
       ref={ref}
-      className="m-4 my-8 sm:my-20 start-col sm:center-row"
+      className="w-full my-28 box-border p-4 sm:p-14 start-center-col"
     >
-      {/* top vouched project on devouch */}
-      <motion.a
-        target="_blank"
-        variants={itemVariants}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className={clsx(
-          'bg-[#D6D8FE] no-underline  sm:w-[300px] text-[#3742FA] start-col p-4 cursor-pointer sm:p-6 rounded-xl text-xl text-s-text font-bold shadow-sm hover:shadow-lg'
-        )}
-        href={DEVOUCH_LINK}
+      <div className="text-4xl sm:text-3xl font-bold text-p-text mb-1 sm:mb-2">
+        In the Spotlight
+      </div>
+      <div className="text-s-text text-base sm:text-lg mb-6 sm:mb-12">
+        Highlighted by Trusted Communities
+      </div>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInView ? 'visible' : 'hidden'}
+        className=" start-col sm:center-row gap-6 sm:gap-8"
       >
-        <motion.div
+        {/* top vouched project on devouch */}
+        <motion.a
+          target="_blank"
           variants={itemVariants}
-          className="start-center-row gap-x-1"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className={clsx(
+            'bg-[#D6D8FE] no-underline  sm:w-[300px] text-[#3742FA] start-col p-4 cursor-pointer sm:p-6 rounded-xl text-xl text-s-text font-bold shadow-sm hover:shadow-lg'
+          )}
+          href={DEVOUCH_LINK}
         >
-          <img
-            src={'https://devouch.xyz/images/logo.svg'}
-            className="w-8 sm:w-10 h-8 sm:h-10"
-          />
-          <img
-            src={'https://devouch.xyz/images/logotype.svg'}
-            className="h-8 sm:h-10"
-          />
+          <motion.div
+            variants={itemVariants}
+            className="start-center-row gap-x-1"
+          >
+            <img
+              src={'https://devouch.xyz/images/logo.svg'}
+              className="w-8 sm:w-10 h-8 sm:h-10"
+            />
+            <img
+              src={'https://devouch.xyz/images/logotype.svg'}
+              className="h-8 sm:h-10"
+            />
 
-          <ArrowUpRight className="text-[#3742FA] ml-3" size={30} />
-        </motion.div>
-        <motion.div variants={itemVariants} className="mt-3 text-[#3742FA]">
-          <span>Most Vouched Project on Devouch</span>
-        </motion.div>
-      </motion.a>
-    </motion.div>
+            <ArrowUpRight className="text-[#3742FA] ml-3" size={30} />
+          </motion.div>
+          <motion.div variants={itemVariants} className="mt-3 text-[#3742FA]">
+            <span>Most Vouched Project on Devouch</span>
+          </motion.div>
+        </motion.a>
+        <motion.a
+          target="_blank"
+          variants={itemVariants}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className={clsx(
+            'bg-[#1f009e] no-underline  sm:w-[300px] text-white start-col p-4 cursor-pointer sm:p-6 rounded-xl text-xl text-s-text font-bold shadow-sm hover:shadow-lg'
+          )}
+        >
+          <motion.div
+            variants={itemVariants}
+            className="start-center-row gap-x-1"
+          >
+            <img src={'/images/tokensmart_logo.png'} className="h-14 sm:h-16" />
+          </motion.div>
+          <motion.div variants={itemVariants} className="mt-3 text-white">
+            <span>Featured on TokenSmart</span>
+          </motion.div>
+        </motion.a>
+      </motion.div>
+    </div>
   )
 }
 

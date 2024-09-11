@@ -6,6 +6,7 @@ import FooterSection from '../components/pages/home/FooterSection'
 import LandingSection from '../components/pages/home/LandingSection'
 import EcosystemSection from '../components/pages/home/EcosystemSection'
 import { useRef } from 'react'
+import FaqSection from '../components/pages/home/FaqSection'
 
 export default function Home() {
   const projectsRef = useRef<HTMLDivElement>(null)
@@ -16,12 +17,13 @@ export default function Home() {
     }
   }
   return (
-    <div className="w-full h-full start-col relative overflow-hidden">
+    <div className="w-full h-full start-col relative overflow-hidden no-scrollbar">
       <LandingSection scrollToProjects={scrollToProjects} />
       <div ref={projectsRef}>
         <FeaturedProjects />
       </div>
       <EcosystemSection />
+      <FaqSection />
       <FooterSection />
     </div>
   )
