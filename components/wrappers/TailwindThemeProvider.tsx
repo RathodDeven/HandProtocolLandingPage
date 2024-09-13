@@ -47,6 +47,15 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
       document.documentElement.setAttribute('data-theme', DEFAULT_THEME)
       window.localStorage.setItem('data-theme', DEFAULT_THEME)
       setTheme(DEFAULT_THEME)
+
+      // const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
+      //   .matches
+      //   ? 'dark'
+      //   : 'light'
+      // document.body.classList.add(systemTheme)
+      // document.documentElement.setAttribute('data-theme', systemTheme)
+      // window.localStorage.setItem('data-theme', systemTheme)
+      // setTheme(systemTheme)
     }
   }, [])
   return (

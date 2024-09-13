@@ -121,7 +121,7 @@ const LandingSection = ({ scrollToProjects }) => {
           initial="hidden"
           animate="show"
         >
-          <div className="absolute bg-p-bg w-full h-14 sm:h-24 bottom-0 left-0 right-0 z-10" />
+          <div className="absolute bg-p-bg w-full h-16 sm:h-24 bottom-0 left-0 right-0 z-10" />
           <Spline scene="https://prod.spline.design/IxRYPtXdWd3qBqXH/scene.splinecode" />
         </motion.div>
       </div>
