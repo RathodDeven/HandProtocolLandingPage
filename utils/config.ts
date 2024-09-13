@@ -20,7 +20,7 @@ export const INIT_PROJECTS = [
     id: 1,
     name: 'Scholarship Programme For Underprivileged Children',
     by: 'Laboso Wambogo',
-    link: 'https://giveth.io/es/project/scholarship-programme-for-underprivileged-children',
+    link: 'https://giveth.io/project/scholarship-programme-for-underprivileged-children',
     images: [
       'https://giveth.mypinata.cloud/ipfs/QmbAhmftUEiGqKey17UroGRJy5perAL4KehNQJHyHSooBV',
       'https://giveth.mypinata.cloud/ipfs/QmcDQr4XqhnkbwV8oNsJpGNsnSYnGXwhVKuDrbg8g8wtC9',
@@ -53,7 +53,7 @@ export const INIT_PROJECTS = [
       'https://giveth.mypinata.cloud/ipfs/QmZQo36U4XE5Pvj4dg6hHm49yA42EYSceWHbwyWBm1VuuM'
     ],
     by: 'Jose Cabrera',
-    link: 'https://giveth.io/es/project/digital-street-musician-doing-free-live-concerts',
+    link: 'https://giveth.io/project/digital-street-musician-doing-free-live-concerts',
     shortDescription:
       "The core of these iniative revolves around the concept of 'Digital Street Music'. I've been offering my music as a public good for various Decentralized Autonomous Organizations (DAOs) and the organic web3 sphere."
   }

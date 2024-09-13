@@ -77,11 +77,6 @@ export const menuItems: MenuItemProps[] = [
         target: '_blank'
       },
       {
-        name: 'Animals/pets',
-        link: 'https://www.tiktok.com/@animalwelfarecattery',
-        target: '_blank'
-      },
-      {
         name: 'Human Rights',
         link: INIT_PROJECTS[1].link,
         target: '_blank'
