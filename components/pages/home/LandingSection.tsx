@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
@@ -6,6 +5,7 @@ import Confetti from 'react-confetti'
 import { HandCoins } from 'lucide-react'
 import { DISCORD_INVITE_LINK } from '../../../utils/config'
 import useIsMobile from '../../../utils/hooks/useIsMobile'
+import Spline from '@splinetool/react-spline'
 
 const LandingSection = ({ scrollToProjects }) => {
   const isMobile = useIsMobile()
@@ -122,14 +122,7 @@ const LandingSection = ({ scrollToProjects }) => {
           animate="show"
         >
           <div className="absolute bg-p-bg w-full h-14 sm:h-24 bottom-0 left-0 right-0 z-10" />
-          <iframe
-            src="https://my.spline.design/molang3dcopy-0ae5e2f6de7287cd246103c17bcb4bcb/"
-            style={{
-              border: 'none'
-            }}
-            width="100%"
-            height="100%"
-          />
+          <Spline scene="https://prod.spline.design/IxRYPtXdWd3qBqXH/scene.splinecode" />
         </motion.div>
       </div>
     </div>
