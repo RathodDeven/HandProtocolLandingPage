@@ -83,7 +83,7 @@ const MenuItem = ({ item }: { item: MenuItemProps }) => {
       )}
       {item.subItems && (
         <motion.div
-          className="absolute left-0 top-4 mt-2 w-fit bg-s-bg shadow-lg p-4 pr-8 space-y-4 rounded-xl"
+          className="absolute left-0 top-4 mt-2.5 bg-s-bg shadow-lg p-4 pr-8 w-28  space-y-4 rounded-xl"
           initial="closed"
           animate={isOpen ? 'open' : 'closed'}
           variants={variants}

@@ -72,15 +72,16 @@ export const menuItems: MenuItemProps[] = [
     name: 'Projects',
     subItems: [
       {
-        name: 'Schools',
-        link: INIT_PROJECTS[0].link,
-        target: '_blank'
-      },
-      {
         name: 'Human Rights',
         link: INIT_PROJECTS[1].link,
         target: '_blank'
       },
+      {
+        name: 'Schools',
+        link: INIT_PROJECTS[0].link,
+        target: '_blank'
+      },
+
       {
         name: 'Music',
         link: INIT_PROJECTS[2].link,
