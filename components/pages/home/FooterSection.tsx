@@ -5,8 +5,8 @@ import { APP_NAME } from '../../../utils/config'
 
 const FooterSection = () => {
   return (
-    <div className="bg-s-bg w-full flex flex-col sm:flex-row sm:justify-around gap-y-8 p-6 sm:p-14 sm:rounded-t-3xl rounded-t-xl">
-      <div className="center sm:items-start w-fit gap-y-4 ">
+    <div className="bg-s-bg w-full box-border flex flex-col sm:flex-row sm:justify-around gap-y-8 p-6 sm:p-14 sm:rounded-t-3xl rounded-t-xl">
+      <div className="center w-full sm:w-fit sm:items-start gap-y-4 ">
         <div className="center-row gap-x-2">
           <img src="/logo.png" className="w-12 h-12" />
           <div className="text-xl sm:text-3xl font-semibold text-p-text">
