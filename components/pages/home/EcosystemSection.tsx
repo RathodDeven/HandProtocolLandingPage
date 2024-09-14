@@ -78,7 +78,7 @@ const EcosystemSection = () => {
             <ArrowUpRight className="text-[#3742FA] ml-3" size={30} />
           </motion.div>
           <motion.div variants={itemVariants} className="mt-3 text-[#3742FA]">
-            <span>Most Vouched Project on Devouch</span>
+            <span>Highly Ranked Project on Devouch</span>
           </motion.div>
         </motion.a>
         <motion.a
