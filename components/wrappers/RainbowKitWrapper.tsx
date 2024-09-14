@@ -4,7 +4,12 @@ import React from 'react'
 
 import '@rainbow-me/rainbowkit/styles.css'
 
-import { getDefaultConfig, RainbowKitProvider } from '@rainbow-me/rainbowkit'
+import {
+  darkTheme,
+  getDefaultConfig,
+  lightTheme,
+  RainbowKitProvider
+} from '@rainbow-me/rainbowkit'
 import {
   coinbaseWallet,
   injectedWallet,
@@ -18,6 +23,7 @@ import { WagmiProvider } from 'wagmi'
 import { mainnet, polygon, optimism, arbitrum, base, zora } from 'wagmi/chains'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 import { APP_NAME } from '../../utils/config'
+import { useTheme } from './TailwindThemeProvider'
 
 const config = getDefaultConfig({
   appName: APP_NAME,
@@ -45,6 +51,7 @@ const config = getDefaultConfig({
 const queryClient = new QueryClient()
 
 const RainbowKitWrapper = ({ children }: { children: React.ReactNode }) => {
+  const { theme } = useTheme()
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
@@ -54,6 +61,7 @@ const RainbowKitWrapper = ({ children }: { children: React.ReactNode }) => {
             appName: APP_NAME
           }}
           modalSize="compact"
+          theme={theme === 'dark' ? darkTheme() : lightTheme()}
         >
           {children}
         </RainbowKitProvider>

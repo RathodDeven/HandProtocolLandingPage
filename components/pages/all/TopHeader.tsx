@@ -16,6 +16,8 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import useIsMobile from '../../../utils/hooks/useIsMobile'
 import MenuItem, { MenuItemProps } from './MenuItem'
+import { useTheme } from '../../wrappers/TailwindThemeProvider'
+import { Sun, Moon } from 'lucide-react'
 
 export const menuItems: MenuItemProps[] = [
   {
@@ -90,10 +92,10 @@ export const menuItems: MenuItemProps[] = [
     ]
   }
 ]
-// import { useTheme } from '../../wrappers/TailwindThemeProvider'
 const TopHeader = () => {
   const [scrollY, setScrollY] = useState(0)
   const [scrollDirection, setScrollDirection] = useState('up')
+  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     if (typeof window === 'undefined') return
@@ -149,11 +151,28 @@ const TopHeader = () => {
           </nav>
         )}
       </div>
-      <ConnectButton
-        accountStatus={isMobile ? 'avatar' : 'full'}
-        chainStatus={isMobile ? 'icon' : 'full'}
-        showBalance={!isMobile}
-      />
+      <div className="start-center-row sm:gap-x-4">
+        <ConnectButton
+          accountStatus={isMobile ? 'avatar' : 'full'}
+          chainStatus={isMobile ? 'icon' : 'full'}
+          showBalance={!isMobile}
+        />
+
+        <motion.div
+          onClick={toggleTheme}
+          whileTap={{
+            scale: 0.8,
+            opacity: 0.8
+          }}
+          className="rounded-full bg-transparent hover:text-p-text cursor-pointer border-none text-s-text transition-colors duration-200"
+        >
+          {theme === 'light' ? (
+            <Sun className="w-6 h-6 " />
+          ) : (
+            <Moon className="w-6 h-6 " />
+          )}
+        </motion.div>
+      </div>
       {/* <button onClick={toggleTheme}>
         {theme === 'light' ? 'Dark' : 'Light'}
       </button> */}

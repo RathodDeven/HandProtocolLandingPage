@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="w-full h-full start-col relative overflow-hidden no-scrollbar">
       <LandingSection scrollToProjects={scrollToProjects} />
-      <div ref={projectsRef}>
+      <div ref={projectsRef} className="mt-20 sm:mt-0">
         <FeaturedProjects />
       </div>
       <EcosystemSection />

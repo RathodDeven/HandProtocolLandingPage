@@ -135,9 +135,9 @@
 [data-theme='dark'] {
   /* background */
   --p-background: #000000;
-  --s-background: #666161;
+  --s-background: #2c2c2c;
 
   /* text */
   --p-text: #ffffff;
-  --s-text: #7b7a7b;
+  --s-text: #a7a7a7;
 }

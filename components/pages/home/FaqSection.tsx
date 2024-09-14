@@ -59,14 +59,11 @@ const FaqSection: React.FC = () => {
 
   return (
     <div className="p-4 my-12 sm:p-14 box-border w-full center text-center">
-      <div className="w-full sm:w-[600px]">
+      <div className="w-full sm:w-[600px] " ref={ref}>
         <div className="text-3xl sm:text-4xl font-bold text-p-text mb-4">
           Frequently Asked Questions
         </div>
-        <div
-          ref={ref}
-          className="text-s-text text-base sm:text-lg mb-4 sm:mb-8"
-        >
+        <div className="text-s-text text-base sm:text-lg mb-4 sm:mb-8">
           Please feel free to ask us on Discord if you have any other questions.
         </div>
         <motion.div

@@ -105,7 +105,7 @@ const FeaturedProjects = () => {
           <motion.a
             key={project.id}
             className={clsx(
-              'bg-white text-p-text no-underline rounded-lg sm:rounded-2xl overflow-hidden cursor-pointer',
+              'bg-s-bg text-p-text no-underline rounded-lg sm:rounded-2xl overflow-hidden cursor-pointer',
               hoveredProjectId === project.id || isMobile
                 ? ' shadow-md'
                 : 'shadow-sm'

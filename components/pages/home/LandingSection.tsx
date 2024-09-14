@@ -65,7 +65,7 @@ const LandingSection = ({ scrollToProjects }) => {
       {isConfettiActive && <Confetti wind={0.03} numberOfPieces={300} />}
 
       {/* landing component with title and description */}
-      <div className="w-screen h-[calc(180vh)] sm:h-screen  box-border  -mt-14 sm:-mt-20 flex flex-col items-center justify-center sm:flex-row sm:justify-between sm:px-16 relative">
+      <div className="w-screen h-[calc(160vh)] sm:h-screen  box-border  -mt-14 sm:-mt-20 flex flex-col items-center justify-center sm:flex-row sm:justify-between sm:px-16 relative">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -117,8 +117,8 @@ const LandingSection = ({ scrollToProjects }) => {
           </motion.div>
         </motion.div>
 
-        <div className="relative w-full sm:w-2/3 h-1/2 sm:h-full sm:-mr-20 ">
-          <div className="absolute bg-p-bg w-full h-16 sm:h-24 bottom-0 left-0 right-0 z-10" />
+        <div className="relative w-full sm:w-2/3 h-1/2 sm:h-full sm:-mr-20">
+          <div className="absolute bg-p-bg w-full h-14 sm:h-24 bottom-0 left-0 right-0 z-10" />
           <iframe
             src={SPLINE_SCENE_IFRAME_LINK}
             style={{
