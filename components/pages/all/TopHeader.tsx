@@ -151,7 +151,7 @@ const TopHeader = () => {
           </nav>
         )}
       </div>
-      <div className="start-center-row sm:gap-x-4">
+      <div className="start-center-row sm:gap-x-4 gap-x-1">
         <ConnectButton
           accountStatus={isMobile ? 'avatar' : 'full'}
           chainStatus={isMobile ? 'icon' : 'full'}
