@@ -100,6 +100,11 @@
     box-sizing: border-box;
   }
 
+  /* Disable blue highlight on touch for all elements */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   .video-container {
     position: relative;
     overflow: hidden;
