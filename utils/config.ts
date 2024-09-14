@@ -14,6 +14,10 @@ export const X_LINK = 'https://x.com/hand_protocol'
 export const DOCS_LINK = 'https://www.gitbook.com/'
 export const DEVOUCH_LINK = 'https://devouch.xyz/project/giveth/14316?tab=all'
 export const GIVETH_LINK = 'https://giveth.io/project/hand-protocol'
+export const SPLINE_SCENE =
+  'https://prod.spline.design/IxRYPtXdWd3qBqXH/scene.splinecode'
+export const SPLINE_SCENE_IFRAME_LINK =
+  'https://my.spline.design/Jh3YjW79i5iQxxVdHUqURz2r/'
 
 export const INIT_PROJECTS = [
   {

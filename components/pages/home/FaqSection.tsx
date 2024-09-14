@@ -2,22 +2,23 @@ import { ChevronUp } from 'lucide-react'
 import React, { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import clsx from 'clsx'
+import { DISCORD_INVITE_LINK } from '../../../utils/config'
 export const FaqData = [
   {
-    q: 'How do I get started?',
-    a: 'You can get started by creating an account and verifying your identity.'
+    q: 'How can I get involved with Hand Protocol?',
+    a: `To get involved, you can join our Discord community where we coordinate efforts, discuss ideas, and work on projects. Whether you're looking to donate, collaborate, or simply learn more, everyone is welcome! Join us`
   },
   {
-    q: 'How do I get verified?',
-    a: 'You can get verified by uploading your ID and a selfie.'
+    q: 'What is Hand Protocol’s mission?',
+    a: 'Our mission is to make a tangible impact on the world through innovative, transparent crypto-driven projects. We support initiatives like the Laboso Caring Foundation, the Music Onboarding Machine, and the Lost Children of Benin City, with a holistic approach to empowering communities and causes.'
   },
   {
-    q: 'How do I get started?',
-    a: 'You can get started by creating an account and verifying your identity.'
+    q: `How can I donate to Hand Protocol's projects?`,
+    a: 'You can donate directly to any of our featured projects through our platform or by using Glo Dollar, which also gives you $NICE tokens that can be redeemed for swag at events. Donations help us support key initiatives, from education and infrastructure to music and culture.'
   },
   {
-    q: 'How do I get verified?',
-    a: 'You can get verified by uploading your ID and a selfie.'
+    q: 'Are there ways to contribute other than donating?',
+    a: 'Absolutely! Besides donations, you can contribute by spreading the word on social media, participating in our community discussions, or helping with specific project needs. Join our Discord to see the latest opportunities and become part of the solution.'
   }
 ]
 
@@ -110,7 +111,20 @@ const FaqSection: React.FC = () => {
                 exit={{ height: 0, opacity: 0 }}
                 className="overflow-hidden text-s-text  font-semibold text-sm sm:text-base"
               >
-                <div className="mt-1 sm:mt-2">{faq.a}</div>
+                <div className="mt-1 sm:mt-2">
+                  {faq.a}{' '}
+                  {index === 0 && (
+                    <span>
+                      <a
+                        className="font-semibold text-p-text"
+                        href={DISCORD_INVITE_LINK}
+                        target="_blank"
+                      >
+                        here
+                      </a>
+                    </span>
+                  )}
+                </div>
               </motion.div>
             </motion.div>
           ))}

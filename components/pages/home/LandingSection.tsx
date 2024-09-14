@@ -3,9 +3,11 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Confetti from 'react-confetti'
 import { HandCoins } from 'lucide-react'
-import { DISCORD_INVITE_LINK } from '../../../utils/config'
+import {
+  DISCORD_INVITE_LINK,
+  SPLINE_SCENE_IFRAME_LINK
+} from '../../../utils/config'
 import useIsMobile from '../../../utils/hooks/useIsMobile'
-import Spline from '@splinetool/react-spline'
 
 const LandingSection = ({ scrollToProjects }) => {
   const isMobile = useIsMobile()
@@ -115,15 +117,17 @@ const LandingSection = ({ scrollToProjects }) => {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          variants={childVariants}
-          className="relative w-full sm:w-2/3 h-1/2 sm:h-full sm:-mr-20 "
-          initial="hidden"
-          animate="show"
-        >
+        <div className="relative w-full sm:w-2/3 h-1/2 sm:h-full sm:-mr-20 ">
           <div className="absolute bg-p-bg w-full h-16 sm:h-24 bottom-0 left-0 right-0 z-10" />
-          <Spline scene="https://prod.spline.design/IxRYPtXdWd3qBqXH/scene.splinecode" />
-        </motion.div>
+          <iframe
+            src={SPLINE_SCENE_IFRAME_LINK}
+            style={{
+              border: 'none'
+            }}
+            width="100%"
+            height="100%"
+          ></iframe>
+        </div>
       </div>
     </div>
   )
