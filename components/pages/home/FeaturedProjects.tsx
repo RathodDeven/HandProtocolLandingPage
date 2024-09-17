@@ -110,7 +110,7 @@ const FeaturedProjects = () => {
                 ? ' shadow-md'
                 : 'shadow-sm'
             )}
-            whileTap={{ scale: 0.95 }}
+            whileTap={isMobile ? { scale: 1 } : { scale: 0.95 }}
             whileHover={{ scale: 1.015 }}
             variants={itemVariants}
             onMouseEnter={() => setHoveredProjectId(project.id)}

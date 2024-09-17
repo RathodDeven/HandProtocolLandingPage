@@ -12,6 +12,7 @@ export const LENS_LINK = 'https://share.lens.xyz/u/lens/handprotocol'
 export const FARCASTER_LINK = 'https://warpcast.com/handprotocol'
 export const X_LINK = 'https://x.com/hand_protocol'
 export const DOCS_LINK = 'https://www.gitbook.com/'
+export const MIRROR_LINK = 'https://mirror.xyz/handprotocol.eth'
 export const DEVOUCH_LINK = 'https://devouch.xyz/project/giveth/14316?tab=all'
 export const GIVETH_LINK = 'https://giveth.io/project/hand-protocol'
 export const SPLINE_SCENE =

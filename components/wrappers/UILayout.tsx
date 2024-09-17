@@ -39,7 +39,7 @@ const UILayout: React.FC<Props> = (props) => {
       >
         {props.children}
       </div>
-      <div className="w-full fixed left-0 right-0 top-0">
+      <div className="w-full fixed z-20 left-0 right-0 top-0">
         <TopHeader />
       </div>
     </div>
