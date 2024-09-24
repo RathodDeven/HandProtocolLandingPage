@@ -1,17 +1,20 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
-import Confetti from 'react-confetti'
+// import Confetti from 'react-confetti'
 import { HandCoins } from 'lucide-react'
 import {
   DISCORD_INVITE_LINK,
+  GIVETH_LINK,
   SPLINE_SCENE_IFRAME_LINK
 } from '../../../utils/config'
 import useIsMobile from '../../../utils/hooks/useIsMobile'
+import { useTheme } from '../../wrappers/TailwindThemeProvider'
 
 const LandingSection = ({ scrollToProjects }) => {
   const isMobile = useIsMobile()
-  const [isConfettiActive, setIsConfettiActive] = useState(false)
+  const { theme } = useTheme()
+  // const [isConfettiActive, setIsConfettiActive] = useState(false)
   const staggerContainer = {
     hidden: { opacity: 0 },
     show: {
@@ -27,27 +30,34 @@ const LandingSection = ({ scrollToProjects }) => {
     show: { opacity: 1, x: 0, scale: 1 }
   }
 
-  const handleButtonClick = () => {
-    setIsConfettiActive(true)
-    setTimeout(() => {
-      setIsConfettiActive(false)
-      if (typeof window === 'undefined') return
-      if (isMobile) {
-        // just redirect to discord invite link
-        window.open(DISCORD_INVITE_LINK, '_blank')
-      }
-      const width = 500
-      const height = 300
-      const left = window.screen.width / 2 - width / 2
-      const top = window.screen.height / 2 - height / 2
+  const handleLendAHandButtonClick = () => {
+    if (typeof window === 'undefined') return
+    window.open(GIVETH_LINK, '_blank')
+    // scrollToProjects()
+    // setIsConfettiActive(true)
+    // setTimeout(() => {
+    //   setIsConfettiActive(false)
+    //   if (typeof window === 'undefined') return
+    //   window.open(GIVETH_LINK, '_blank')
+    //   scrollToProjects()
+    // }, 2000) // Duration of the confetti animation
+  }
 
-      window.open(
-        DISCORD_INVITE_LINK,
-        'popup',
-        `width=${width},height=${height},left=${left},top=${top}`
-      )
-      scrollToProjects()
-    }, 2000) // Duration of the confetti animation
+  const inviteToDiscord = () => {
+    if (isMobile) {
+      // just redirect to discord invite link
+      window.open(DISCORD_INVITE_LINK, '_blank')
+    }
+    const width = 500
+    const height = 300
+    const left = window.screen.width / 2 - width / 2
+    const top = window.screen.height / 2 - height / 2
+
+    window.open(
+      DISCORD_INVITE_LINK,
+      'popup',
+      `width=${width},height=${height},left=${left},top=${top}`
+    )
   }
 
   useEffect(() => {
@@ -62,10 +72,10 @@ const LandingSection = ({ scrollToProjects }) => {
 
   return (
     <div>
-      {isConfettiActive && <Confetti wind={0.03} numberOfPieces={300} />}
+      {/* {isConfettiActive && <Confetti wind={0.03} numberOfPieces={300} />} */}
 
       {/* landing component with title and description */}
-      <div className="w-screen h-[calc(160vh)] sm:h-screen  box-border  -mt-14 sm:-mt-20 flex flex-col items-center justify-center sm:flex-row sm:justify-between sm:px-16 relative">
+      <div className="w-screen h-[calc(160vh)] sm:h-screen  box-border  -mt-6 sm:-mt-20 flex flex-col items-center justify-center sm:flex-row sm:justify-between sm:px-16 relative">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -106,13 +116,35 @@ const LandingSection = ({ scrollToProjects }) => {
                 scale: 0.9,
                 opacity: 0.8
               }}
-              onClick={handleButtonClick}
+              onClick={handleLendAHandButtonClick}
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2, type: 'spring' }}
               className="bg-p-text shrink-0 cursor-grab active:cursor-grabbing center-row border-none gap-x-4 font-bold text-lg text-p-bg px-10 py-4 rounded-2xl"
             >
               <HandCoins width={24} height={24} />
               Lend A Hand
+            </motion.button>
+            <motion.button
+              variants={childVariants}
+              whileTap={{
+                scale: 0.9,
+                opacity: 0.8
+              }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2, type: 'spring' }}
+              onClick={inviteToDiscord}
+              className="bg-s-bg shrink-0 cursor-grab active:cursor-grabbing center-row border-none gap-x-4 font-bold text-lg text-p-text px-10 py-4 rounded-2xl"
+            >
+              <img
+                src={
+                  theme === 'light'
+                    ? '/discord-icon-black.svg'
+                    : '/discord-icon-white.svg'
+                }
+                width={24}
+                height={24}
+              />
+              Join Discord
             </motion.button>
           </motion.div>
         </motion.div>
