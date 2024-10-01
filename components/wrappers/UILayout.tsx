@@ -7,6 +7,7 @@ import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 import useIsMobile from '../../utils/hooks/useIsMobile'
+import { usePathname, useRouter } from 'next/navigation'
 
 interface Props {
   // Define any props that the component will accept
@@ -19,6 +20,7 @@ const UILayout: React.FC<Props> = (props) => {
   // Define the component's logic and rendering here
   const [isLoading, setIsLoading] = React.useState(true)
   const isMobile = useIsMobile()
+  const path = usePathname()
 
   useEffect(() => {
     setIsLoading(false)
@@ -39,9 +41,11 @@ const UILayout: React.FC<Props> = (props) => {
       >
         {props.children}
       </div>
-      <div className="w-full fixed z-20 left-0 right-0 top-0">
-        <TopHeader />
-      </div>
+      {path !== '/iframe' && (
+        <div className="w-full fixed z-20 left-0 right-0 top-0">
+          <TopHeader />
+        </div>
+      )}
     </div>
   )
 }
