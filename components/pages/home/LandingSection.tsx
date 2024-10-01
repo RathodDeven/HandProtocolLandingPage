@@ -149,7 +149,7 @@ const LandingSection = ({ scrollToProjects }) => {
           </motion.div>
         </motion.div>
 
-        <div className="relative w-full sm:w-2/3 h-1/2 sm:h-full sm:-mr-20">
+        <div className="relative -translate-x-4 w-[calc(100vh+20px)] sm:w-2/3 h-1/2 sm:h-full sm:-mr-20">
           <div className="absolute bg-p-bg w-full h-14 sm:h-24 bottom-0 left-0 right-0 z-10" />
           <iframe
             src={SPLINE_SCENE_IFRAME_LINK}
