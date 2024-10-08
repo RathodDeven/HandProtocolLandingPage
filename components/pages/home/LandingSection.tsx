@@ -88,7 +88,7 @@ const LandingSection = ({ scrollToProjects }) => {
             className="text-4xl px-4 sm:px-0 sm:text-6xl font-bold"
             transition={{ duration: 0.3, type: 'spring' }}
           >
-            Empowering Public Good Projects
+            Empowering Public Goods Projects
           </motion.div>
           <motion.div
             variants={childVariants}

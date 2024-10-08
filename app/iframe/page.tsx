@@ -23,7 +23,7 @@ const page = () => {
           initial={{ opacity: 0, x: -20, scale: 1.5 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
         >
-          Empowering Public Good Projects
+          Empowering Public Goods Projects
         </motion.div>
       </Link>
 

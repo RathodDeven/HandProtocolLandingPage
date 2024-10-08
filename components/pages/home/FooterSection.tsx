@@ -14,7 +14,7 @@ const FooterSection = () => {
           </div>
         </div>
         <div className="text-lg font-semibold text-s-text">
-          Empowering Public Good Projects
+          Empowering Public Goods Projects
         </div>
       </div>
 
