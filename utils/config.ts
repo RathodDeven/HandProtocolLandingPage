@@ -48,34 +48,34 @@ export const INIT_PROJECTS = [
       'Traditional organizations declined to help us. Web3 is making a full-length documentary possible. Our documentary plans to educate communities about predatory practices used by traffickers and establish a blueprint for Nigerians to leverage Web3 to address local issues. ',
     link: 'https://giveth.io/project/documentary-about-nigerian-human-trafficking'
   },
-  {
-    id: 3,
-    name: 'Huottoja University Of Ancestral Knowledge',
-    images: [
-      'https://giveth.mypinata.cloud/ipfs/QmRVghjwJmsH3WZNQxEPhz7ta8y8u41jeavBswrDeyrWEp',
-      'https://giveth.mypinata.cloud/ipfs/QmVwdqqD2z378QBv9wXM9JeHtK4MXTbBLJTNmMdR6ahe3U',
-      'https://giveth.mypinata.cloud/ipfs/Qme7N8XhDenKKAtymSyoh839qPfyWCRahXxsTvk7ym9S7P',
-      'https://giveth.mypinata.cloud/ipfs/QmT2tGgQMRF4VzycWXgDvKzsBcEeoKyPqzqtopYh1NLNSy'
-    ],
-    by: 'Jose Cabrera',
-    link: 'https://giveth.io/project/huottoja-university-of-ancestral-knowledge',
-    shortDescription:
-      'In the Venezuelan Amazon, on the edges of the Orinoco River, lives the Huöttöja or Piaroa community, who are known for their peace and harmony with nature. Their Kuami Kiachi (strength in the heart) philosophy promotes calm and temperance in all circumstances, a reflection of their ancestral lifestyle.'
-  }
   // {
   //   id: 3,
-  //   name: 'DIGITAL Street Musician Doing Free Live Concerts',
+  //   name: 'Huottoja University Of Ancestral Knowledge',
   //   images: [
-  //     'https://giveth.mypinata.cloud/ipfs/QmThFYyWhirw15savs6DeQxTdNoz3o5fsNzHE4aRLkFTre',
-  //     'https://giveth.mypinata.cloud/ipfs/QmZPDHhccYEvrPdUYEJYAZfokxNnNXK7UyniLstwxbkuGQ',
-  //     'https://giveth.mypinata.cloud/ipfs/QmRGvuJ7wVJGUya244eV4qCpfvbLjCnRDFn8XweX8hLYbx',
-  //     'https://giveth.mypinata.cloud/ipfs/QmZQo36U4XE5Pvj4dg6hHm49yA42EYSceWHbwyWBm1VuuM'
+  //     'https://giveth.mypinata.cloud/ipfs/QmRVghjwJmsH3WZNQxEPhz7ta8y8u41jeavBswrDeyrWEp',
+  //     'https://giveth.mypinata.cloud/ipfs/QmVwdqqD2z378QBv9wXM9JeHtK4MXTbBLJTNmMdR6ahe3U',
+  //     'https://giveth.mypinata.cloud/ipfs/Qme7N8XhDenKKAtymSyoh839qPfyWCRahXxsTvk7ym9S7P',
+  //     'https://giveth.mypinata.cloud/ipfs/QmT2tGgQMRF4VzycWXgDvKzsBcEeoKyPqzqtopYh1NLNSy'
   //   ],
   //   by: 'Jose Cabrera',
-  //   link: 'https://giveth.io/project/digital-street-musician-doing-free-live-concerts',
+  //   link: 'https://giveth.io/project/huottoja-university-of-ancestral-knowledge',
   //   shortDescription:
-  //     "The core of these iniative revolves around the concept of 'Digital Street Music'. I've been offering my music as a public good for various Decentralized Autonomous Organizations (DAOs) and the organic web3 sphere."
+  //     'In the Venezuelan Amazon, on the edges of the Orinoco River, lives the Huöttöja or Piaroa community, who are known for their peace and harmony with nature. Their Kuami Kiachi (strength in the heart) philosophy promotes calm and temperance in all circumstances, a reflection of their ancestral lifestyle.'
   // }
+  {
+    id: 3,
+    name: 'DIGITAL Street Musician Doing Free Live Concerts',
+    images: [
+      'https://giveth.mypinata.cloud/ipfs/QmThFYyWhirw15savs6DeQxTdNoz3o5fsNzHE4aRLkFTre',
+      'https://giveth.mypinata.cloud/ipfs/QmZPDHhccYEvrPdUYEJYAZfokxNnNXK7UyniLstwxbkuGQ',
+      'https://giveth.mypinata.cloud/ipfs/QmRGvuJ7wVJGUya244eV4qCpfvbLjCnRDFn8XweX8hLYbx',
+      'https://giveth.mypinata.cloud/ipfs/QmZQo36U4XE5Pvj4dg6hHm49yA42EYSceWHbwyWBm1VuuM'
+    ],
+    by: 'Jose Cabrera',
+    link: 'https://giveth.io/project/digital-street-musician-doing-free-live-concerts',
+    shortDescription:
+      "The core of these iniative revolves around the concept of 'Digital Street Music'. I've been offering my music as a public good for various Decentralized Autonomous Organizations (DAOs) and the organic web3 sphere."
+  }
   //   {
   //     id: 4,
   //     name: 'Animate Welfare',
