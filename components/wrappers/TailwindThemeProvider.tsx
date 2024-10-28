@@ -12,15 +12,14 @@ interface ContextType {
 }
 
 export const ThemeContext = createContext<ContextType>({
-  theme: DEFAULT_THEME,
+  theme: 'light',
   toggleTheme: () => {}
 })
-
+// import MUITheme from './MUITheme'
 const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [theme, setTheme] = useState<'light' | 'dark'>(DEFAULT_THEME)
 
   const toggleTheme = () => {
-    if (typeof window === 'undefined') return
     if (theme === 'light') {
       document.body.classList.add('dark')
       document.documentElement.setAttribute('data-theme', 'dark')
@@ -35,7 +34,6 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   useEffect(() => {
-    if (typeof window === 'undefined') return
     const theme = window.localStorage.getItem('data-theme')
     if (theme) {
       document.body.classList.add(theme)
@@ -46,13 +44,25 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
         .matches
         ? 'dark'
-        : 'light'
+        : DEFAULT_THEME
       document.body.classList.add(systemTheme)
       document.documentElement.setAttribute('data-theme', systemTheme)
       window.localStorage.setItem('data-theme', systemTheme)
       setTheme(systemTheme)
     }
   }, [])
+
+  useEffect(() => {
+    const metaThemeColor = document.querySelector('meta[name=theme-color]')
+    if (metaThemeColor) {
+      // @ts-ignore
+      metaThemeColor.setAttribute(
+        'content',
+        theme === 'dark' ? '#2c2c2c' : '#ffffff'
+      )
+    }
+  }, [theme])
+
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
