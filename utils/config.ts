@@ -23,17 +23,16 @@ export const SPLINE_SCENE_IFRAME_LINK =
 export const INIT_PROJECTS = [
   {
     id: 1,
-    name: 'Scholarship Programme For Underprivileged Children',
-    by: 'Laboso Wambogo',
-    link: 'https://giveth.io/project/scholarship-programme-for-underprivileged-children',
+    name: 'Open Source Live Streaming Platform on Lens Protocol',
+    by: 'Deven Rathod',
+    link: 'https://explorer.gitcoin.co/#/projects/0x16429f74cbb2cef6f9f48481b6c8bc49fa12989d75c1f9d82462f8bb91f079eb',
     images: [
-      'https://giveth.mypinata.cloud/ipfs/QmbAhmftUEiGqKey17UroGRJy5perAL4KehNQJHyHSooBV',
-      'https://giveth.mypinata.cloud/ipfs/QmcDQr4XqhnkbwV8oNsJpGNsnSYnGXwhVKuDrbg8g8wtC9',
-      '/projects/laboso/1.jpg',
-      '/projects/laboso/2.jpg'
+      'https://ik.imagekit.io/lens/media-snapshot/3e3c106e222a05c69767af09bee4dade1c658e6a2b4c853e7eeab59f2467045b.png',
+      'https://d16c97c2np8a2o.cloudfront.net/ipfs/bafkreidepxgjovvutgi3nhwvp644wu6onpnzgucu6pdpppxh7bo5kv3tn4',
+      'https://ik.imagekit.io/lens/media-snapshot/tr:w-1000/8391806428454e492506a88863c9d3b624e43345861006cf893f24bcbfabde0d.png'
     ],
     shortDescription:
-      'Thanks to our generous donors, 66 students have been given the opportunity to attend secondary school. Without your support, these children would remain in villages with little hope for the future.'
+      'BloomersTV aims to transform live streaming by giving creators full control over their earnings and distributing streams across multiple platforms for greater reach. It fosters a creator-first ecosystem that encourages open participation and community-driven growth.'
   },
   {
     id: 2,

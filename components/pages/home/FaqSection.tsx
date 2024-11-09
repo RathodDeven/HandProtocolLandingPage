@@ -10,7 +10,7 @@ export const FaqData = [
   },
   {
     q: 'What is Hand Protocol’s mission?',
-    a: 'Our mission is to make a tangible impact on the world through innovative, transparent crypto-driven projects. We support initiatives like the Laboso Caring Foundation, the Music Onboarding Machine, and the Lost Children of Benin City, with a holistic approach to empowering communities and causes.'
+    a: 'Our mission is to make a tangible impact on the world through innovative, transparent crypto-driven projects. We support initiatives like bloomerstv, the Music Onboarding Machine, and the Lost Children of Benin City, with a holistic approach to empowering communities and causes.'
   },
   {
     q: `How can I donate to Hand Protocol's projects?`,
