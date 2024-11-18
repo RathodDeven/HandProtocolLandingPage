@@ -75,10 +75,5 @@ export const INIT_PROJECTS = [
     shortDescription:
       "The core of these iniative revolves around the concept of 'Digital Street Music'. I've been offering my music as a public good for various Decentralized Autonomous Organizations (DAOs) and the organic web3 sphere."
   }
-  //   {
-  //     id: 4,
-  //     name: 'Animate Welfare',
-  //     by: 'animalwelfarecattery',
-  //     image: 'https://via.placeholder.com/150'
-  //   }
+  
 ]
