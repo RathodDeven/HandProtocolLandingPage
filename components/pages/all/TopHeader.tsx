@@ -86,13 +86,13 @@ export const menuItems: MenuItemProps[] = [
         target: '_blank'
       },
       {
-        name: 'Schools',
+        name: 'Healing Music',
         link: INIT_PROJECTS[0].link,
         target: '_blank'
       },
 
       {
-        name: 'Music',
+        name: 'BloomersTV',
         link: INIT_PROJECTS[2].link,
         target: '_blank'
       }
