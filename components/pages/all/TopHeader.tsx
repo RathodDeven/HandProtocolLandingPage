@@ -82,12 +82,12 @@ export const menuItems: MenuItemProps[] = [
     subItems: [
       {
         name: 'Human Rights',
-        link: INIT_PROJECTS[1].link,
+        link: INIT_PROJECTS[0].link,
         target: '_blank'
       },
       {
         name: 'Healing Music',
-        link: INIT_PROJECTS[0].link,
+        link: INIT_PROJECTS[1].link,
         target: '_blank'
       },
 
