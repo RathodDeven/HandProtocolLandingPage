@@ -3,13 +3,17 @@ import React, { useEffect, useState } from 'react'
 import { ConnectButton, useConnectModal } from '@rainbow-me/rainbowkit'
 import {
   APP_NAME,
+  BLOOMERSTV_LINK,
   DEVOUCH_LINK,
+  DIGITAL_STREET_MUSIC_LINK,
   DISCORD_INVITE_LINK,
+  DOCUMENTARY_HUMAN_RIGHTS_LINK,
   GITHUB_LINK,
   GIVETH_LINK,
   INIT_PROJECTS,
   LENS_LINK,
   MIRROR_LINK,
+  VIDA_VERDE_LINK,
   X_LINK
 } from '@/utils/config'
 import Link from 'next/link'
@@ -82,18 +86,23 @@ export const menuItems: MenuItemProps[] = [
     subItems: [
       {
         name: 'Human Rights',
-        link: INIT_PROJECTS[0].link,
+        link: DOCUMENTARY_HUMAN_RIGHTS_LINK,
         target: '_blank'
       },
       {
         name: 'Healing Music',
-        link: INIT_PROJECTS[1].link,
+        link: DIGITAL_STREET_MUSIC_LINK,
         target: '_blank'
       },
 
       {
         name: 'BloomersTV',
-        link: INIT_PROJECTS[2].link,
+        link: BLOOMERSTV_LINK,
+        target: '_blank'
+      },
+      {
+        name: 'Vida Verde',
+        link: VIDA_VERDE_LINK,
         target: '_blank'
       }
     ]
