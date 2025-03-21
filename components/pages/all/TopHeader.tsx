@@ -5,12 +5,12 @@ import {
   APP_NAME,
   BLOOMERSTV_LINK,
   DEVOUCH_LINK,
-  DIGITAL_STREET_MUSIC_LINK,
+  // DIGITAL_STREET_MUSIC_LINK,
   DISCORD_INVITE_LINK,
   DOCUMENTARY_HUMAN_RIGHTS_LINK,
   GITHUB_LINK,
   GIVETH_LINK,
-  INIT_PROJECTS,
+  // INIT_PROJECTS,
   LENS_LINK,
   MIRROR_LINK,
   VIDA_VERDE_LINK,
@@ -89,11 +89,11 @@ export const menuItems: MenuItemProps[] = [
         link: DOCUMENTARY_HUMAN_RIGHTS_LINK,
         target: '_blank'
       },
-      {
-        name: 'Healing Music',
-        link: DIGITAL_STREET_MUSIC_LINK,
-        target: '_blank'
-      },
+      // {
+      //   name: 'Healing Music',
+      //   link: DIGITAL_STREET_MUSIC_LINK,
+      //   target: '_blank'
+      // },
 
       {
         name: 'BloomersTV',

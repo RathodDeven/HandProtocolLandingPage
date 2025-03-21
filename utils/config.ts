@@ -57,31 +57,31 @@ export const INIT_PROJECTS = [
       'Traditional organizations declined to help us. Web3 is making a full-length documentary possible. Our documentary plans to educate communities about predatory practices used by traffickers and establish a blueprint for Nigerians to leverage Web3 to address local issues. ',
     link: DOCUMENTARY_HUMAN_RIGHTS_LINK
   },
-  {
-    id: 2,
-    name: 'DIGITAL Street Musician Doing Free Live Concerts',
-    images: [
-      'https://giveth.mypinata.cloud/ipfs/QmThFYyWhirw15savs6DeQxTdNoz3o5fsNzHE4aRLkFTre',
-      'https://giveth.mypinata.cloud/ipfs/QmZPDHhccYEvrPdUYEJYAZfokxNnNXK7UyniLstwxbkuGQ',
-      'https://giveth.mypinata.cloud/ipfs/QmRGvuJ7wVJGUya244eV4qCpfvbLjCnRDFn8XweX8hLYbx',
-      'https://giveth.mypinata.cloud/ipfs/QmZQo36U4XE5Pvj4dg6hHm49yA42EYSceWHbwyWBm1VuuM'
-    ],
-    by: 'Jose Cabrera',
-    link: DIGITAL_STREET_MUSIC_LINK,
-    shortDescription:
-      "The core of this initiative revolves around the concept of 'Digital Street Music'. I've been offering my music as a public good for various Decentralized Autonomous Organizations (DAOs) and the organic web3 sphere."
-  }
   // {
-  //   id: 3,
-  //   name: 'Open Source Live Streaming Platform on Lens Protocol',
-  //   by: 'Deven Rathod',
-  //   link: BLOOMERSTV_LINK,
+  //   id: 2,
+  //   name: 'DIGITAL Street Musician Doing Free Live Concerts',
   //   images: [
-  //     'https://ik.imagekit.io/lens/media-snapshot/3e3c106e222a05c69767af09bee4dade1c658e6a2b4c853e7eeab59f2467045b.png',
-  //     'https://d16c97c2np8a2o.cloudfront.net/ipfs/bafkreidepxgjovvutgi3nhwvp644wu6onpnzgucu6pdpppxh7bo5kv3tn4',
-  //     'https://ik.imagekit.io/lens/media-snapshot/tr:w-1000/8391806428454e492506a88863c9d3b624e43345861006cf893f24bcbfabde0d.png'
+  //     'https://giveth.mypinata.cloud/ipfs/QmThFYyWhirw15savs6DeQxTdNoz3o5fsNzHE4aRLkFTre',
+  //     'https://giveth.mypinata.cloud/ipfs/QmZPDHhccYEvrPdUYEJYAZfokxNnNXK7UyniLstwxbkuGQ',
+  //     'https://giveth.mypinata.cloud/ipfs/QmRGvuJ7wVJGUya244eV4qCpfvbLjCnRDFn8XweX8hLYbx',
+  //     'https://giveth.mypinata.cloud/ipfs/QmZQo36U4XE5Pvj4dg6hHm49yA42EYSceWHbwyWBm1VuuM'
   //   ],
+  //   by: 'Jose Cabrera',
+  //   link: DIGITAL_STREET_MUSIC_LINK,
   //   shortDescription:
-  //     'BloomersTV aims to transform live streaming by giving creators full control over their earnings and distributing streams across multiple platforms for greater reach. It fosters a creator-first ecosystem that encourages open participation and community-driven growth.'
+  //     "The core of this initiative revolves around the concept of 'Digital Street Music'. I've been offering my music as a public good for various Decentralized Autonomous Organizations (DAOs) and the organic web3 sphere."
   // }
+  {
+    id: 3,
+    name: 'Open Source Live Streaming Platform on Lens Protocol',
+    by: 'Deven Rathod',
+    link: BLOOMERSTV_LINK,
+    images: [
+      'https://ik.imagekit.io/lens/media-snapshot/3e3c106e222a05c69767af09bee4dade1c658e6a2b4c853e7eeab59f2467045b.png',
+      'https://d16c97c2np8a2o.cloudfront.net/ipfs/bafkreidepxgjovvutgi3nhwvp644wu6onpnzgucu6pdpppxh7bo5kv3tn4',
+      'https://ik.imagekit.io/lens/media-snapshot/tr:w-1000/8391806428454e492506a88863c9d3b624e43345861006cf893f24bcbfabde0d.png'
+    ],
+    shortDescription:
+      'BloomersTV aims to transform live streaming by giving creators full control over their earnings and distributing streams across multiple platforms for greater reach. It fosters a creator-first ecosystem that encourages open participation and community-driven growth.'
+  }
 ]
