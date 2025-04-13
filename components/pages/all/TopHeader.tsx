@@ -99,12 +99,12 @@ export const menuItems: MenuItemProps[] = [
         name: 'BloomersTV',
         link: BLOOMERSTV_LINK,
         target: '_blank'
-      },
-      {
-        name: 'Vida Verde',
-        link: VIDA_VERDE_LINK,
-        target: '_blank'
       }
+      // {
+      //   name: 'Vida Verde',
+      //   link: VIDA_VERDE_LINK,
+      //   target: '_blank'
+      // }
     ]
   }
 ]

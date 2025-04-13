@@ -29,21 +29,21 @@ export const BLOOMERSTV_LINK =
   'https://explorer.gitcoin.co/#/projects/0x16429f74cbb2cef6f9f48481b6c8bc49fa12989d75c1f9d82462f8bb91f079eb'
 
 export const INIT_PROJECTS = [
-  {
-    id: 3,
-    name: '+Vida + Verde Venezuela',
-    by: 'Vida Verde',
-    images: [
-      'https://giveth.mypinata.cloud/ipfs/QmcStBE4boayqj8rweKLikbBVyesDxfkDharb3V8rT7mQP',
-      'https://giveth.mypinata.cloud/ipfs/QmcjfFxomnFBQsjRDt4R4uz1fhZb7T8KR1dsbgDnYtrsdp',
-      'https://giveth.mypinata.cloud/ipfs/Qmdxd86BF3zuvmTnp4V2fkF4zB3gkg4Jbkw72MhbmCSgDz',
-      'https://giveth.mypinata.cloud/ipfs/QmVygMnkGMAnrg4tQmqcs7eqVk7kPMJoagyyUcaXcbfsGJ',
-      'https://giveth.mypinata.cloud/ipfs/QmYbUMhtsSHCftGFV9ApWMMNnypwjNsXkJTAd65D9U5kQQ'
-    ],
-    shortDescription:
-      'Our goal is to have a stable Green Roots nucleus, an educational space that involves nearby rural communities to reconnect them with ancestral practices of care and regeneration of nature and to complete the final stages of construction of our Hogar Verde residences.',
-    link: VIDA_VERDE_LINK
-  },
+  // {
+  //   id: 3,
+  //   name: '+Vida + Verde Venezuela',
+  //   by: 'Vida Verde',
+  //   images: [
+  //     'https://giveth.mypinata.cloud/ipfs/QmcStBE4boayqj8rweKLikbBVyesDxfkDharb3V8rT7mQP',
+  //     'https://giveth.mypinata.cloud/ipfs/QmcjfFxomnFBQsjRDt4R4uz1fhZb7T8KR1dsbgDnYtrsdp',
+  //     'https://giveth.mypinata.cloud/ipfs/Qmdxd86BF3zuvmTnp4V2fkF4zB3gkg4Jbkw72MhbmCSgDz',
+  //     'https://giveth.mypinata.cloud/ipfs/QmVygMnkGMAnrg4tQmqcs7eqVk7kPMJoagyyUcaXcbfsGJ',
+  //     'https://giveth.mypinata.cloud/ipfs/QmYbUMhtsSHCftGFV9ApWMMNnypwjNsXkJTAd65D9U5kQQ'
+  //   ],
+  //   shortDescription:
+  //     'Our goal is to have a stable Green Roots nucleus, an educational space that involves nearby rural communities to reconnect them with ancestral practices of care and regeneration of nature and to complete the final stages of construction of our Hogar Verde residences.',
+  //   link: VIDA_VERDE_LINK
+  // },
   {
     id: 1,
     name: 'Documentary About Nigerian Human Trafficking',
